@@ -4,8 +4,21 @@
 "http://struts.apache.org/dtds/struts-2.1.dtd"> <struts>
 
 <package name="com.tarena.outman" extends="struts-default" namespace="/"> 
-<action name="welcome" class="com.tarena.outman.WelcomeAction"> 
-<result name="success">/jsp/welcome.jsp</result>
-<result name="fail">/jsp/nameform.jsp</result>
-</action> </package>
+	 <action name="nameform">
+	 	<result name="success">/WEB-INF/jsp/nameform.jsp</result>
+	 </action>
+
+	<action name="welcome" class="com.tarena.outman.WelcomeAction"> 
+		<result name="success">/WEB-INF/jsp/welcome.jsp</result>
+		<result name="fail">/WEB-INF/jsp/nameform.jsp</result>
+	</action>
+	
+	<action name="projectList" class="com.tarena.outman.ProjectListAction">
+		<result name="success">/WEB-INF/jsp/projectList.jsp</result> 
+	</action> 
+</package>
+
+<!-- <package name="helloworld" extends="struts-default"
+namespace="/day01"> 
+</package> -->
 </struts>
